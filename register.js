@@ -1,22 +1,27 @@
-console.log("Register");
+let pets=[];//empty array
 
-let pet=[];//empty array
+function Pet(name,age,gender,breed){
+    this.name=name;
+    this.age=age;
+    this.gender=gender;
+    this.breed=breed;
+}
+let inputName = document.getElementById("txtName");
+let inputAge = document.getElementById("txtAge");
+let inputGender = document.getElementById("txtGender");
+let inputBreed = document.getElementById("txtBreed");
 
-//creae the pet1 and pet2 (name, age, gender, breeed)
-
-let pet1={
-    name:"Chancho",
-    age:10,
-    gender:"male",
-    breed:"shitzu"
+function register(){
+    console.log(inputName.value,inputAge.value,inputGender.value,inputBreed.value);
+    let newPet = new Pet(inputName.value,inputAge.value,inputGender.value,inputBreed.value);
+    pets.push(newPet);
+    console.log(newPet);
 }
 
-let pet2={
-    name:"Snow",
-    age:10,
-    gender:"male",
-    breed:"pomeranian"
+function init(){
+    console.log("init fn");
+    let scooby = new Pet("Scooby",60,"Male","Dane");
+    pets.push(scooby);
 }
 
-document.write(pet1.name);
-document.write(pet2.name);
+window.onload=init;
