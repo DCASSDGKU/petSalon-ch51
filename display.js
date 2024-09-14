@@ -5,27 +5,35 @@ function displayCards(){
         let pet = pets[i];
         CARDS.innerHTML+=`
         <div class="pet">
-            <p>${pet.name}</p>
-            <p>${pet.age}</p>
-        </div>`
-        
+            <p>Name:${pet.name}</p>
+            <p>Age:${pet.age}</p>
+        </div>
+        ` 
     }
 }
 
 function displayRows(){
     //get the tbody
-
+    const TABLE = document.getElementById("petRows");
     // clear the tbody
+    let row="";
 
     //travel the array (for)
-
-        //create the template row
-        //ROW.innerHTML=`
-            //<tr>
-
-            //</tr>
-        //`
+    for(let i=0;i<pets.length;i++){
+        let pet = pets[i];
+        
+        row+=`
+            <tr id="${i}">
+                <td>${pet.name}</td>
+                <td>${pet.age}</td>
+                <td>${pet.gender}</td> 
+                <td>${pet.breed}</td> 
+                <td>${pet.service}</td>
+                <td>${pet.visit}</td>        
+                <td> <button class="btn btn-md btn-danger" onclick="deletePet(${i})"> Delete </button></td>
+            </tr>
+        `;
+    }
+    TABLE.innerHTML=row;
+    document.getElementById("totalPets").innerHTML=pets.length;    
 }
-
-//*** on the register.js replace the displayCrads() by dislayRows()/
-

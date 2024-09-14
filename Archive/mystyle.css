@@ -32,9 +32,6 @@ header img{
 .pet{
     background-color: #dedede;
     padding: 10px;
-    border: 1px solid black;
-
-}
-.highlight{
-    border-left: 10px solid #ffcc00;
+    border-width: 10px;
+    margin-bottom: 10px;
 }
