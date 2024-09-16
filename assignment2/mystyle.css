@@ -1,0 +1,37 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    font-family: Arial;
+}
+p{
+    line-height: 2;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 50%;
+}
+h2{
+    text-align: center;
+}
+/*header*/
+header{
+    background-color: #ffcc00;
+}
+header img{
+    width: 30%;
+}
+.about-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 20px;
+}
+.pet{
+    background-color: #dedede;
+    padding: 10px;
+    border-width: 10px;
+    margin-bottom: 10px;
+}
